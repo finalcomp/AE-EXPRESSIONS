@@ -1,0 +1,7 @@
+pointNull1 = thisComp.layer("Shape Layer 1: Path 1 [1.1.0]");
+pointNull2 = thisComp.layer("Shape Layer 1: Path 1 [1.1.1]");
+
+point1 = fromCompToSurface(pointNull1.toComp(pointNull1.anchorPoint));
+point2 = fromCompToSurface(pointNull2.toComp(pointNull2.anchorPoint));
+
+content("Shape 1").content("Path 1").path.createPath(points=[point1, point2], inTangents=[], outTangents=[], is_closed=false)
