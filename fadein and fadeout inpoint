@@ -1,0 +1,4 @@
+dur = 1;
+fadeIn = ease(time,inPoint,inPoint+dur,0,100);
+fadeOut = ease(time,outPoint-dur,outPoint,0,100);
+fadeIn - fadeOut;
