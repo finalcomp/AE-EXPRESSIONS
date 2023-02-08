@@ -1,0 +1,13 @@
+Speed = effect("SLIDER SPEED")("Slider");
+
+X = text.sourceText;
+F = Math.round(time * 2 % 1); 
+L = X.length;
+T = Speed;
+LastT = Speed.valueAtTime(time-0.1);
+
+Cursor = " ";
+if (F==1 | T>LastT) Cursor = "|";
+if (T>=L) Cursor = " ";
+if (T>0) X.substr(0,T) + Cursor
+else Cursor
