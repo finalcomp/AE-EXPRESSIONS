@@ -1,0 +1,8 @@
+num = effect("3D Point Control")("3D Point").value[0].toFixed();
+
+function addDots(x) {
+   
+ return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+addDots(num)
