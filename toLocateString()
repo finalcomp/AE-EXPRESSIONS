@@ -1,7 +1,17 @@
+//currency
 x = 2233333.3;
 
 us = x.toLocaleString("en-US", {style:"currency", currency:"USD"});
-
 br = x.toLocaleString("pt-BR", {style:"currency", currency:"BRL"});
 
 br;
+
+
+//percent increase
+
+x = linear(time,0,3,0,99.44);
+
+us = x.toLocaleString("en-US", {style:"decimal",maximumFractionDigits:"2",minimumFractionDigits:"2"});
+br = x.toLocaleString("pt-BR", {style:"decimal",maximumFractionDigits:"2",minimumFractionDigits:"2"});
+
+br + "%"
