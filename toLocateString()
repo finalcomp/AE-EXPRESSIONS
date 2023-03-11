@@ -1,0 +1,7 @@
+x = 2233333.3;
+
+us = x.toLocaleString("en-US", {style:"currency", currency:"USD"});
+
+br = x.toLocaleString("pt-BR", {style:"currency", currency:"BRL"});
+
+br;
