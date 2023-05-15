@@ -6,3 +6,16 @@ function addDots(x) {
 }
 
 addDots(num)
+
+
+//with decimals
+
+v = 1323.2;
+num = v.toFixed(2).replace(".",",");
+
+function addDots(x) {
+   
+ return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+addDots(num)
