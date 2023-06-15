@@ -1,0 +1,7 @@
+pointCount = 4;
+pointArray = [];
+for (i=1; i<=pointCount;i++) {	
+	pointArray.push(fromCompToSurface(thisComp.layer("Null "+i).toComp(thisComp.layer("Null "+i).anchorPoint)))	
+}
+
+content("Group 1").content("Path 1").path.createPath(points=pointArray, inTangents=[], outTangents=[], is_closed=false)
