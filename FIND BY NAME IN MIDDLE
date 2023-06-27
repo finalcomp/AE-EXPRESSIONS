@@ -1,0 +1,8 @@
+var layerArray = [];
+for (var i = 1; i <= thisComp.numLayers; i++) {
+  var layer = thisComp.layer(i);
+  if (layer.name.indexOf("TBASE") !== -1) {
+    layerArray.push(layer);
+  }
+}
+layerArray;
