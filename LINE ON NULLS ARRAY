@@ -5,3 +5,22 @@ for (i=1; i<=pointCount;i++) {
 }
 
 content("Group 1").content("Path 1").path.createPath(points=pointArray, inTangents=[], outTangents=[], is_closed=false)
+
+
+
+// EXPRESSION FOR LINE GRAPH
+
+var layerArray = [];
+for (var i = 1; i <= thisComp.numLayers; i++) {
+  var layer = thisComp.layer(i);
+  if (layer.name.indexOf("TVALUE") !== -1) {
+    layerArray.push(layer);
+  }
+}
+layerArray;
+pointArray = [];
+for (i=0; i<=layerArray.length-1;i++) {	
+	pointArray.push(fromCompToSurface(thisComp.layer(layerArray[i].name).toComp(thisComp.layer(layerArray[i].name).anchorPoint)))	
+}
+
+content("BAR STROKE").content("Path 1").path.createPath(points=pointArray, inTangents=[], outTangents=[], is_closed=false)
